@@ -1,0 +1,4 @@
+ReloadedSetting: "&6設定をリロードしました。"
+ErrorReloadSetting: "&cリロード中にエラーが発生しました。"
+PlaceBanedBlock: "&c以下のアイテムを設置する権限がありません: &e%1$s"
+DetonateTNT: "&cTNTを起爆させる権限がありません。"

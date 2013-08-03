@@ -1,0 +1,11 @@
+name: BlockRestrictions
+main: hide92795.bukkit.plugin.blockrestrictions.BlockRestrictions
+description: Restrict TNT and BedRock
+version: 1.5.2_1
+depend: [hide92795CoreLib]
+author: hide92795
+
+commands:
+  blockrestrictions-reload:
+    permission: blockrestrictions.reload
+    aliases: [brr]
