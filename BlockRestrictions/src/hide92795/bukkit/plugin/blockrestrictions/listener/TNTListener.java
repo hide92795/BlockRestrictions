@@ -27,7 +27,7 @@ public class TNTListener implements Listener {
 						continue;
 					}
 					if (isPlayerDetonate(player, location)) {
-						if (!player.hasPermission("blockrestrictions.canexplode")) {
+						if (!player.hasPermission("blockrestrictions.detonate.tnt")) {
 							player.sendMessage(plugin.localize.getString(Type.DETONATE_TNT));
 							event.setCancelled(true);
 						}
