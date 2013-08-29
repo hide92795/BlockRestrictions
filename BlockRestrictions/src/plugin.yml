@@ -1,7 +1,7 @@
 name: BlockRestrictions
 main: hide92795.bukkit.plugin.blockrestrictions.BlockRestrictions
 description: Restrict TNT and BedRock
-version: 1.6.2_1
+version: 1.6.2_2
 depend: [hide92795CoreLib]
 author: hide92795
 
