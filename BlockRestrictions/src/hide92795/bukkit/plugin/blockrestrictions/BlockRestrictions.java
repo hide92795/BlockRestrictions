@@ -10,8 +10,6 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class BlockRestrictions extends JavaPlugin {
-	private final BlockPlaceListener blockPlaceListener = new BlockPlaceListener(this);
-	private final TNTListener tntListener = new TNTListener(this);
 	public Localize localize;
 	private Logger logger;
 
@@ -21,9 +19,14 @@ public class BlockRestrictions extends JavaPlugin {
 		reloadConfig();
 		logger = getLogger();
 		localize = new Localize(this);
+		try {
+			reload();
+		} catch (Exception e1) {
+			logger.severe("Error has occured on loading config.");
+		}
 		PluginManager pm = getServer().getPluginManager();
-		pm.registerEvents(this.blockPlaceListener, this);
-		pm.registerEvents(this.tntListener, this);
+		pm.registerEvents(new BlockPlaceListener(this), this);
+		pm.registerEvents(new TNTListener(this), this);
 		logger.info("BlockRestrictions enabled!");
 	}
 
